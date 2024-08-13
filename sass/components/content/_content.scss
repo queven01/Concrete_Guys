@@ -1,0 +1,45 @@
+.column, .card-component {
+    margin: 5rem 0rem;
+    @media(max-width: 992px){
+        margin: 2rem 0rem;
+    }
+} 
+
+.column {
+    &.content-image {
+        .row {
+            align-items: center;
+        }
+        .content-side {
+            display: flex;
+            justify-content: flex-end;
+
+            .content {
+                padding: 0 15%;
+                @media(max-width: 992px){
+                    padding: 8% 5%;
+                }
+            }
+            @media(max-width: 992px){
+                order: 2;
+            }
+        }
+
+        .image-side {
+            img {
+                aspect-ratio: 3 / 2;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+            @media(max-width: 992px){
+                order: 1;
+            }
+        }
+        &.flip_image {
+            .content-side {
+                order: 2;
+            }
+        }
+    }
+}

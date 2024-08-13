@@ -1,0 +1,51 @@
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border: none;
+	background-color: $color__background-button;
+	color: white;
+	line-height: 1;
+    padding: 0.75rem 1.5rem;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+	display: inline-block;
+
+	transition: all .3s;
+
+	border: 2px solid $secondary;
+
+	&.primary {
+		color: white;
+		background-color: $primary;
+	}
+
+	&:hover {
+		color: white;
+		background-color: $secondary-dark;
+		border: 2px solid $secondary-dark;
+
+		&.primary {
+			color: white;
+			background-color: $primary-dark;
+		}
+	}
+
+	&:visited {
+		color: white;
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+	}
+
+	//Active Button 
+	&.active {
+		background: white;
+		color: $secondary;
+	}
+}
